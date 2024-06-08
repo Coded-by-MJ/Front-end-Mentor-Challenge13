@@ -27,12 +27,12 @@ Users should be able to:
 
 
 ### Screenshot
-![Desktop View](images/desktop.png.jpg)
+![Desktop View](images/desktop.png)
 
-![Mobile View](images/mobile.png.jpg)
+![Mobile View](images/mobile.png)
 
 ### Links
-- Solution URL: [Click to view Solution](https://www.frontendmentor.io/solutions/loopstudios-landing-page-using-css-grid-Q2EONNQZCb)
+- Solution URL: [Click to view Solution](https://www.frontendmentor.io/solutions/time-tracking-dashboard-solution-using-css-grid-MX_ntr65HI)
 - Live Site URL: [Click to view Live Site](https://coded-by-mj.github.io/Front-end-Mentor-Challenge13/)
 
 

@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+
+:root{
+    --fontRubik:  "Rubik", sans-serif;
+    --work: hsl(15, 100%, 70%);
+    --play: hsl(195, 74%, 62%);
+    --study: hsl(348, 100%, 68%);
+    --exercise: hsl(145, 58%, 55%);
+    --social: hsl(264, 64%, 52%);
+     --selfcare : hsl(43, 84%, 65%);
+
+
+     --lightpurprle: hsl(236, 100%, 87%);
+}
+
+html{
+    box-sizing: border-box;
+}
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+body{
+    font-family: var(--fontRubik);
+    font-size: 16px;
+    color: #fff;
+    min-height: 100vh;
+    background-color: hsl(226, 43%, 10%);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+
+.container{
+    width: 100%;
+    padding-block: 3rem;
+    padding-inline: 1rem;
+    display: grid;
+    justify-content: center;
+    align-content: start;
+    gap: 25px;
+    grid-template-areas: 
+       "person-container"
+       "report-container";
+  
+
+
+}
+
+
+.person-container{
+    border-radius: 15px;
+    width: 300px;
+    background-color: hsl(235, 46%, 20%);
+    grid-area: person-container;
+    height: 180px;
+}
+
+.profile{
+    display: flex;
+    justify-content: flex-start;
+    gap: 14px;
+    align-items: center;
+    padding: 1.8rem;
+    padding-inline: 1.5rem;
+    border-radius: 15px;
+    background-color: hsl(246, 80%, 60%);
+}
+
+
+.profile-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+
+
+    & > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.profile-details{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+
+    & > span{
+        display: inline-block;
+        font-size: 0.8rem;
+        color: var(--lightpurprle)
+    }
+
+    & > h3{
+        font-weight: 300;
+        font-size: 1.4rem;
+        color: #fff;
+    }
+}
+
+
+
+
+.report-timeframes{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1.8rem;
+    align-items: center;
+
+}
+
+
+.time-btn{
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    background: transparent;
+    font-size: 1.05rem;
+    color: hsl(235, 45%, 61%);
+    transition: all 0.2s;
+
+
+    &:hover, &.active{
+        color: #fff;
+    }
+}
+
+
+.report-container{
+    grid-area: report-container;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+
+.report-card{
+    width: 300px;
+    height: 150px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    background-position: calc(100% - 16px) -10px, 50% 50%;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+
+}
+
+.report-details{
+    padding: 1.4rem;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 100%;
+    height: 117px;
+    background-color: hsl(235, 46%, 20%);
+    display: grid;
+    justify-content: space-between;
+    gap: 5px;
+    grid-template-areas: 
+      "title ellipsis"
+      "current previous";
+
+    & > *{
+        display: block;
+    }
+
+    &:hover{
+        background-color: hsl(235, 45%, 61%);
+        
+    }
+   
+}
+
+.title{
+    font-size: 18px;
+    grid-area: title;
+    justify-self: start;
+    color: #fff;
+    font-weight: 500;
+}
+
+
+.current{
+    grid-area: current;
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.ellipsis{
+    grid-area: ellipsis;
+    justify-self: end;
+    align-self: start;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    &:hover > svg path{
+           fill: #fff;
+    }
+
+}
+
+
+.previous{
+    justify-self: end;
+    align-self: center;
+    /* color: hsl(235, 45%, 61%); */
+    color: hsl(236, 100%, 87%);
+    font-size: 14px;
+    grid-area: previous;
+}
+
+
+[data-title="Work"]{
+    /* background-color: var(--work); */
+    background-image: url(images/icon-work.svg),
+      linear-gradient(180deg, var(--work) 55%, transparent);
+}
+
+[data-title="Play"]{
+    /* background-color: var(--play); */
+    background-image: url(images/icon-play.svg),
+    linear-gradient(180deg, var(--play) 55%, transparent);
+}
+
+[data-title="Study"]{
+    /* background-color: var(--study); */
+    background-image: url(images/icon-study.svg),
+    linear-gradient(180deg, var(--study) 55%, transparent);
+}
+
+[data-title="Exercise"]{
+    /* background-color: var(--exercise); */
+    background-image: url(images/icon-exercise.svg),
+    linear-gradient(180deg, var(--exercise) 55%, transparent);
+
+}
+
+[data-title="Social"]{
+    /* background-color: var(--social); */
+    background-image: url(images/icon-social.svg),
+    linear-gradient(180deg, var(--social) 55%, transparent);
+}
+
+[data-title="Self Care"]{
+    /* background-color: var(--selfcare); */
+    background-image: url(images/icon-self-care.svg),
+    linear-gradient(180deg, var(--selfcare) 55%, transparent);
+}
+
+
+
+
+
+@media screen and (min-width: 1200px) {
+
+    .container{
+        max-width: 1100px;
+        grid-template-areas: 
+         "person-container report-container" 
+         "person-container report-container";
+    }
+
+   .person-container{
+      height:  470px;
+      width: 250px;
+   }
+
+   .profile{
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 30px;
+      padding-bottom: 5rem;
+   }
+
+   .profile-details{
+      width:  150px;
+
+      & > h3{
+         font-size: 2.4rem;
+      }
+   }
+
+   .report-timeframes{
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 24px;
+   }
+
+   .report-container{
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+   .report-card{
+      width: 250px;
+      height: 220px
+   }
+
+   .report-details{
+     height: 180px;
+     grid-template-areas:
+     "title  ellipsis"
+     "current   ."
+     "previous  .";
+   }
+
+   .current{
+     font-size: 40px;
+     align-self: end;
+   }
+
+   .previous{
+      align-self: start;
+   }
+
+
+
+    
+}

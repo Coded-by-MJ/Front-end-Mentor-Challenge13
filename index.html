@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+</head>
+<body>
+
+    <main class="container">
+
+        <div class="person-container">
+            <div class="profile">
+                <div class="profile-image">
+                    <img src="images/image-jeremy.png" alt="Jeremy">
+                </div>
+                    <div class="profile-details">
+                        <span>Report for</span>
+                        <h3>Jeremy Robson</h3>
+                    </div>
+               
+            </div>
+             
+            <div class="report-timeframes">
+                <button type="button" class="time-btn" data-timeframe="daily"  data-previoustext="Yesterday">
+                    Daily
+                </button>  
+                <button type="button" class="time-btn active" data-timeframe="weekly" data-previoustext="Last Week">
+                    Weekly
+                </button> 
+                
+                <button type="button" class="time-btn" data-timeframe="monthly"  data-previoustext="Last Month">
+                    Monthly
+                </button>
+            </div>
+        </div>
+  
+
+
+     <div class="report-container">
+<!-- 
+      <div class="report-card" data-title="Work">
+          <div class="report-details">
+             <span class="title">Work</span>
+             <span class="ellipsis">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+             </span>
+             <span class="current">32hrs</span>
+             <p class="previous">Last Week - 8hrs</p>
+          </div>
+      </div> 
+      
+      <div class="report-card" data-title="Work">
+          <div class="report-details">
+             <span class="title">Work</span>
+             <span class="ellipsis">
+                <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+             </span>
+             <span class="current">32hrs</span>
+             <p class="previous">Last Week - 8hrs</p>
+          </div>
+      </div> -->
+
+    </div>
+
+   </main>
+
+
+   <script src="script.js"></script>
+</body> 
+</html>
